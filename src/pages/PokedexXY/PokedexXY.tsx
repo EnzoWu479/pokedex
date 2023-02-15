@@ -1,7 +1,10 @@
 import { useState } from "react";
 import {
   BottomCape,
+  Button,
+  ButtonRight,
   Container,
+  ContainerButton,
   ContainerPokedex,
   Main,
   Pokeball,
@@ -20,14 +23,19 @@ export default () => {
     <Container>
       <ContainerPokedex
         animate={{ height: open ? 700 : 401 }}
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
+        // onMouseEnter={() => setOpen(true)}
+        // onMouseLeave={() => setOpen(false)}
         transition={{ delay: open ? 0.3 : 0, duration: 0.3 }}
       >
         <Main>
           <ScreenContainer>
             <Screen>pokemon</Screen>
           </ScreenContainer>
+          <ContainerButton>
+            <Button side="left" />
+            <Button side="center" />
+            <Button side="right" />
+          </ContainerButton>
           <Pokeball
             initial={{ translateX: "-50%", translateY: "-50%" }}
             animate={{

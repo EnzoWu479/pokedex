@@ -45,6 +45,7 @@ export const Main = styled.main`
   align-items: center;
   position: relative;
   box-shadow: 0 0 10px 10px inset #0008;
+  gap: 20px;
 `;
 export const Pokeball = styled(motion.div)`
   background-color: red;
@@ -99,4 +100,21 @@ export const Screen = styled(motion.div)`
   background-color: #55bffd;
   width: 80%;
   height: 80%;
+`;
+export const ContainerButton = styled.div`
+  border-radius: 0 0 100% 100%;
+  overflow: hidden;
+  height: 50px;
+  width: 100px;
+  display: flex;
+  gap: 5px;
+`;
+interface ButtonProps {
+  side: "left" | "right" | "center";
+}
+export const Button = styled(motion.button)<ButtonProps>`
+  height: 50px;
+  width: 30px;
+  border-radius: 10px 10px 0 0;
+  border: none;
 `;
