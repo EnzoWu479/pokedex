@@ -17,13 +17,13 @@ import {
 import Cape from "./components/Cape/Cape";
 
 export default () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <Container>
       <ContainerPokedex
         animate={{ height: open ? 700 : 401 }}
-        // onMouseEnter={() => setOpen(true)}
-        // onMouseLeave={() => setOpen(false)}
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
         transition={{ delay: open ? 0.3 : 0, duration: 0.3 }}
       >
         <Main>
