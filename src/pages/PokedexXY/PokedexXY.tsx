@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   BottomCape,
   Button,
-  ButtonRight,
   Container,
   ContainerButton,
   ContainerPokedex,
