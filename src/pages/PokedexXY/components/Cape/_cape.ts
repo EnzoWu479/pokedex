@@ -14,16 +14,16 @@ export const Cape = styled.div`
   background: linear-gradient(to left, #0005 10px, transparent 20px);
 `;
 export const CirclePokeball = styled.div`
-  height: 225px;
+  height: 250px;
   width: 250px;
-  background: radial-gradient(circle at 50% 50%, transparent 50px, #000 0);
+  background: radial-gradient(circle at 50% 50%, transparent 80px, #000 0);
   border: 6px solid #fff;
   border-radius: 50%;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: -60%;
+  bottom: -80%;
   left: 50%;
   transform: translateX(-50%);
 `;
@@ -34,7 +34,7 @@ export const CircleBlue = styled.div`
   border-radius: 50%;
 `;
 export const CircleLineWhite = styled.div`
-  background: linear-gradient(to left, #fff 18%, transparent 18% 82%, #fff 82%);
+  background: linear-gradient(to left, #fff 22%, transparent 22% 78%, #fff 78%);
   width: 100%;
   height: 4px;
   position: absolute;

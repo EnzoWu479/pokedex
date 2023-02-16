@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const Container = styled.div`
   height: 100vh;
 `;
 export const ContainerPokedex = styled(motion.div)`
-  width: 400px;
+  width: 450px;
   height: 405px;
   /* background-color: #52b6e7; */
   display: flex;
@@ -19,7 +19,7 @@ export const ContainerPokedex = styled(motion.div)`
   position: relative;
 `;
 export const TopCape = styled(motion.div)`
-  background: radial-gradient(circle at 50% 103%, transparent 60px, red 0);
+  background: radial-gradient(circle at 50% 103%, transparent 80px, #e11e1b 0);
   width: 100%;
   height: 200px;
   border-radius: 20px 20px 0 0;
@@ -27,6 +27,7 @@ export const TopCape = styled(motion.div)`
   overflow: hidden;
   top: 0px;
   filter: drop-shadow(0px 10px 8px #0008);
+  pointer-events: none;
 `;
 
 export const BottomCape = styled(TopCape)`
@@ -35,86 +36,80 @@ export const BottomCape = styled(TopCape)`
   bottom: 0px;
 `;
 
-export const Main = styled.main`
-  width: 95%;
-  height: calc(100% - 250px);
+export const Main = styled(motion.main)`
+  width: 90%;
+  height: 90%;
   background-color: #52b6e7;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-top: 40px;
   box-shadow: 0 0 10px 10px inset #0008;
   gap: 20px;
 `;
-export const Pokeball = styled(motion.div)`
-  background-color: red;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-export const PokeballContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-export const PokeballCenter = styled.div`
-  background-color: #fff;
-  /* border: 2px solid #000; */
-  width: 20%;
-  height: 20%;
-  border-radius: 50%;
-`;
-export const PokeballLine = styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  height: 2px;
-  z-index: -1;
-  background-color: #fff;
-  bottom: 0;
-`;
 export const ScreenContainer = styled.div`
-  background-color: #000;
+  background-color: #000e;
   width: 80%;
-  height: 200px;
+  height: 220px;
+  min-height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 5px;
 `;
-export const Screen = styled(motion.div)`
+export const ScreenContent = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #55bffd;
-  width: 80%;
+  width: 85%;
   height: 80%;
+  border-radius: 2px;
 `;
 export const ContainerButton = styled.div`
-  border-radius: 0 0 100% 100%;
-  overflow: hidden;
-  height: 50px;
-  width: 100px;
+  border-radius: 10px 10px 0 0;
+  border-bottom-left-radius: 40% 70%;
+  border-bottom-right-radius: 40% 70%;
   display: flex;
   gap: 5px;
+  border: 2px solid #0006;
+  padding: 5px;
 `;
 interface ButtonProps {
   side: "left" | "right" | "center";
 }
 export const Button = styled(motion.button)<ButtonProps>`
-  height: 50px;
-  width: 30px;
-  border-radius: 10px 10px 0 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px 5px 0 0;
   border: none;
+  background-color: #52b6e7;
+  border: 2px solid #0006;
+  box-shadow: 5px 0px 5px #0004;
+  transition: all linear 0.1s;
+  ${({ side }) => {
+    switch (side) {
+      case "left":
+        return css`
+          border-bottom-left-radius: 100%;
+          border-bottom-right-radius: 5px;
+        `;
+      case "right":
+        return css`
+          border-bottom-right-radius: 100%;
+          border-bottom-left-radius: 5px;
+        `;
+      default:
+        return css`
+          border-bottom-right-radius: 15px 5px;
+          border-bottom-left-radius: 15px 5px;
+          height: 44px;
+        `;
+    }
+  }}
+  &:active {
+    box-shadow: 2px 0px 2px #0004;
+  }
 `;
