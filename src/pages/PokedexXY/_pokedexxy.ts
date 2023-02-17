@@ -90,7 +90,7 @@ export const Button = styled(motion.button)<ButtonProps>`
   border: none;
   background-color: #52b6e7;
   border: 2px solid #0006;
-  box-shadow: 5px 0px 5px #0004;
+  box-shadow: 5px 0px 5px #0008;
   transition: all linear 0.1s;
   ${({ side }) => {
     switch (side) {
@@ -113,7 +113,7 @@ export const Button = styled(motion.button)<ButtonProps>`
     }
   }}
   &:active {
-    box-shadow: 2px 0px 2px #0004;
+    box-shadow: 2px 0px 2px #0008;
   }
 `;
 export const Footer = styled.footer`
