@@ -39,6 +39,14 @@ export const CircleLineWhite = styled.div`
   height: 4px;
   position: absolute;
   bottom: 0;
+  @media (max-width: 450px) {
+    background: linear-gradient(
+      to left,
+      #fff 0 calc(50% - 125px),
+      transparent calc(50% - 125px) calc(50% + 125px),
+      #fff calc(50% + 125px) 100%
+    );
+  }
 `;
 export const Light = styled.div`
   background: radial-gradient(circle at 0% 50%, #b48e8c 0, #180000 60%);
