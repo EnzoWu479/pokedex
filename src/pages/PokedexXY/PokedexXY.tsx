@@ -69,38 +69,40 @@ export default () => {
     if (pokemonId) getPokemon();
   }, [pokemonId]);
   return (
-    <Container>
-      <ContainerPokedex
-        initial={{ height: 450 }}
-        animate={{ height: open ? 700 : 450 }}
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
-        transition={{ delay: open ? 0.3 : 0, duration: 0.3 }}
-      >
-        <Main>
-          <ScreenContainer>
-            <ScreenContent>
-              {pokemonId ? (
-                <Screen pokemon={pokemon} detail={pokemonDetail} />
-              ) : (
-                <Versions selectedRegion={selectedRegion} />
-              )}
-            </ScreenContent>
-          </ScreenContainer>
-          <ContainerButton>
-            <Button side="left" type="button" onClick={handlePrevious} />
-            <Button side="center" type="button" onClick={handleClickCenter} />
-            <Button side="right" type="button" onClick={handleNext} />
-          </ContainerButton>
-          <ScreenProtector open={open} />
-        </Main>
-        <TopCape>
-          <Cape />
-        </TopCape>
-        <BottomCape>
-          <Cape />
-        </BottomCape>
-      </ContainerPokedex>
+    <>
+      <Container>
+        <ContainerPokedex
+          initial={{ height: 450 }}
+          animate={{ height: open ? 700 : 450 }}
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+          transition={{ delay: open ? 0.3 : 0, duration: 0.3 }}
+        >
+          <Main>
+            <ScreenContainer>
+              <ScreenContent>
+                {pokemonId ? (
+                  <Screen pokemon={pokemon} detail={pokemonDetail} />
+                ) : (
+                  <Versions selectedRegion={selectedRegion} />
+                )}
+              </ScreenContent>
+            </ScreenContainer>
+            <ContainerButton>
+              <Button side="left" type="button" onClick={handlePrevious} />
+              <Button side="center" type="button" onClick={handleClickCenter} />
+              <Button side="right" type="button" onClick={handleNext} />
+            </ContainerButton>
+            <ScreenProtector open={open} />
+          </Main>
+          <TopCape>
+            <Cape />
+          </TopCape>
+          <BottomCape>
+            <Cape />
+          </BottomCape>
+        </ContainerPokedex>
+      </Container>
       <Footer>
         <p>
           Favicon: This file is licensed under the
@@ -137,6 +139,6 @@ export default () => {
           </a>
         </p>
       </Footer>
-    </Container>
+    </>
   );
 };
