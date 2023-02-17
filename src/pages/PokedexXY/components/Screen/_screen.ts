@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { bg_day } from "../../../../assets";
+import { bg_day, bg_night } from "../../../../assets";
+import isDay from "../../../../utils/isDay";
 
 export const Container = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ export const Image = styled.img`
   padding: 10px;
   box-sizing: border-box;
   object-fit: contain;
-  background-image: url(${bg_day});
+  background-image: url(${isDay ? bg_day : bg_night});
   background-size: cover;
   border-radius: 10px;
 `;

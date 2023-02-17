@@ -120,10 +120,11 @@ export const Footer = styled.footer`
   p {
     text-align: center;
     font-size: 14px;
+    color: #fff;
   }
   a {
     text-decoration: none;
-    color: blue;
+    color: cyan;
     word-wrap: none;
     margin: 0 5px;
   }
