@@ -40,3 +40,13 @@ export const CircleLineWhite = styled.div`
   position: absolute;
   bottom: 0;
 `;
+export const Light = styled.div`
+  background: radial-gradient(circle at 0% 50%, #b48e8c 0, #180000 60%);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;

@@ -76,11 +76,14 @@ export default () => {
           animate={{ height: open ? 700 : 450 }}
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
-          transition={{ delay: open ? 0.3 : 0, duration: 0.3 }}
+          transition={{ delay: open ? 0.3 : 0.3, duration: 0.3 }}
         >
           <Main>
             <ScreenContainer>
-              <ScreenContent>
+              <ScreenContent
+                animate={{ opacity: open ? 1 : 0 }}
+                transition={{ delay: open ? 0.5 : 0 }}
+              >
                 {pokemonId ? (
                   <Screen pokemon={pokemon} detail={pokemonDetail} />
                 ) : (

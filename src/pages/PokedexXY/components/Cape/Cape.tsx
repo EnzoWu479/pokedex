@@ -4,6 +4,7 @@ import {
   CircleLineWhite,
   CircleLines,
   CirclePokeball,
+  Light,
 } from "./_cape";
 
 export default () => {
@@ -27,6 +28,7 @@ export default () => {
           width: "340px",
         }}
       />
+      <Light />
       <CirclePokeball>
         <CircleBlue />
       </CirclePokeball>

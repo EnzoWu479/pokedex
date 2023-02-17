@@ -20,14 +20,14 @@ export default ({ open }: Props) => {
           opacity: open ? 0 : 1,
           pointerEvents: open ? "none" : "all",
         }}
-        transition={{ delay: open ? 0 : 0.3, duration: 0.3 }}
+        transition={{ delay: open ? 0.3 : 0.6, duration: 0.3 }}
       >
         <Pokeball
           animate={{
             opacity: open ? 0 : 1,
             rotate: open ? 0 : 180,
           }}
-          transition={{ delay: open ? 0 : 0.3, duration: 0.3 }}
+          transition={{ delay: open ? 0 : 0.7, duration: 0.3 }}
         >
           <PokeballContainer>
             <PokeballLine />
