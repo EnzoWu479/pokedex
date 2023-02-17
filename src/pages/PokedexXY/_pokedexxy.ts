@@ -17,6 +17,9 @@ export const ContainerPokedex = styled(motion.div)`
   justify-content: center;
   align-items: center;
   position: relative;
+  @media (max-width: 450px) {
+    width: 95%;
+  }
 `;
 export const TopCape = styled(motion.div)`
   background: radial-gradient(circle at 50% 103%, transparent 80px, #e11e1b 0);

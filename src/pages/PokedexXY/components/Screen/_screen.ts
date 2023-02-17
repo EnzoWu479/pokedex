@@ -22,6 +22,9 @@ export const Image = styled.img`
 export const TopContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
+  @media (max-width: 450px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 export const InfosContainer = styled.div`
   padding-left: 20px;
@@ -31,12 +34,18 @@ export const Code = styled.h2`
   font-size: 13px;
   margin-left: 5px;
   font-weight: 700;
+  @media (max-width: 450px) {
+    font-size: 11px;
+  }
 `;
 export const Name = styled.h3`
   margin-left: 10px;
   font-size: 15px;
   &:first-letter {
     text-transform: uppercase;
+  }
+  @media (max-width: 450px) {
+    font-size: 13px;
   }
 `;
 export const Division = styled.div`
@@ -54,11 +63,17 @@ export const InfoLine = styled.div`
   font-weight: 700;
   margin-left: 2px;
   margin: 2px 0;
+  @media (max-width: 450px) {
+    font-size: 11px;
+  }
 `;
 export const TypeContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
+  @media (max-width: 450px) {
+    gap: 2px;
+  }
 `;
 export const Type = styled.div`
   text-transform: uppercase;
@@ -68,6 +83,10 @@ export const Type = styled.div`
   border-radius: 50px;
   box-shadow: 0 0 5px 0 inset #fff;
   border: 1px solid #000;
+  @media (max-width: 450px) {
+    font-size: 8px;
+    padding: 1px 3px;
+  }
 `;
 export const Description = styled.div`
   font-size: 11px;
