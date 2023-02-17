@@ -116,3 +116,22 @@ export const Button = styled(motion.button)<ButtonProps>`
     box-shadow: 2px 0px 2px #0004;
   }
 `;
+export const Footer = styled.footer`
+  position: fixed;
+  bottom: 0;
+  z-index:-1;
+  p {
+    /* display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center; */
+    text-align: center;
+    font-size: 14px;
+  }
+  a {
+    text-decoration: none;
+    color: blue;
+    word-wrap: none;
+    margin: 0 5px;
+  }
+`;
