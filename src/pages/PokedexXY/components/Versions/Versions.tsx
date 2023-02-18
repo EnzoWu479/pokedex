@@ -13,7 +13,7 @@ interface Props {
 export default ({ selectedRegion }: Props) => {
   function scrollX() {
     if (selectedRegion === 0) return 0;
-    const x = (selectedRegion - 1) * 100;
+    const x = (selectedRegion - 1) * 105;
     if (x > 500) return 500;
     return x;
   }
