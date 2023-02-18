@@ -116,16 +116,3 @@ export const Button = styled(motion.button)<ButtonProps>`
     box-shadow: 2px 0px 2px #0008;
   }
 `;
-export const Footer = styled.footer`
-  p {
-    text-align: center;
-    font-size: 14px;
-    color: #fff;
-  }
-  a {
-    text-decoration: none;
-    color: cyan;
-    word-wrap: none;
-    margin: 0 5px;
-  }
-`;

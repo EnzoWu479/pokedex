@@ -6,7 +6,6 @@ import {
   Container,
   ContainerButton,
   ContainerPokedex,
-  Footer,
   Main,
   ScreenContainer,
   ScreenContent,
@@ -19,6 +18,7 @@ import api from "../../services/api";
 import Screen from "./components/Screen/Screen";
 import Versions from "./components/Versions/Versions";
 import regions from "../../utils/regions";
+import Footer from "./components/Footer/Footer";
 
 export default () => {
   const { pokemonId } = useParams();
@@ -106,42 +106,7 @@ export default () => {
           </BottomCape>
         </ContainerPokedex>
       </Container>
-      <Footer>
-        <p>
-          Favicon: This file is licensed under the
-          <a
-            href="https://en.wikipedia.org/wiki/en:Creative_Commons"
-            target="_blank"
-            rel="external noreferrer"
-          >
-            Creative Commons
-          </a>
-          <a
-            href="https://creativecommons.org/licenses/by-sa/4.0/deed.en"
-            target="_blank"
-            rel="external noreferrer"
-          >
-            Attribution-Share Alike 4.0 International
-          </a>
-          license.
-        </p>
-        <p>
-          Projeto feito utilizando
-          <a href="https://pokeapi.co" target="_blank" rel="noreferrer">
-            PokeApi
-          </a>
-        </p>
-        <p>
-          Projeto feito por
-          <a
-            href="https://www.linkedin.com/in/enzo-wu-41b2ba22a/"
-            target="_blank"
-            rel="external noreferrer"
-          >
-            Enzo Wu
-          </a>
-        </p>
-      </Footer>
+      <Footer />
     </>
   );
 };

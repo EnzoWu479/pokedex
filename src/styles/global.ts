@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import FadeInAnimation from "../shared/Animations/FadeInAnimation";
 import isDay from "../utils/isDay";
 
 export const GlobalStyle = createGlobalStyle`
@@ -7,11 +6,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-  }
-  tr{
-    animation: ${FadeInAnimation} ease 0.3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
   }
   *:focus{
     outline: none;
